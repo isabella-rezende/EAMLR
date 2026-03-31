@@ -1349,3 +1349,37 @@ nav {
     gap: 3rem;
   }
 }
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 2px;
+    background-color: #C9A84C;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+    .nav-links {
+        display: none; /* Escondido por padrão no mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98);
+        padding: 2rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .nav-links.active { display: flex; }
+    .nav-right { display: none; } /* Esconde o user/insta no mobile para limpar o visual */
+}
