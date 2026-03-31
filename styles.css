@@ -1,3 +1,6 @@
+/* ══════════════════════════════
+   RESET BÁSICO
+══════════════════════════════ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,9 +15,13 @@ a {
 body {
   background: #0a0a0a;
   font-family: 'Raleway', sans-serif;
-  height: 200vh;
+  height: 200vh; /* altura extra para testar o scroll */
 }
 
+
+/* ══════════════════════════════
+   NAVBAR
+══════════════════════════════ */
 
 nav {
   position: fixed;
@@ -41,6 +48,7 @@ nav.scrolled {
 }
 
 
+/* ── Logo ── */
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.1rem;
@@ -52,6 +60,7 @@ nav.scrolled {
 }
 
 
+/* ── Links ── */
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -72,6 +81,7 @@ nav.scrolled {
 }
 
 
+/* ── Lado direito ── */
 .nav-right {
   display: flex;
   align-items: center;
@@ -116,6 +126,7 @@ nav.scrolled {
   gap: 1rem;
 }
  
+/* ── Foto ── */
 .hero-photo {
   width: 160px;
   height: 160px;
@@ -129,8 +140,10 @@ nav.scrolled {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Enquanto não tiver foto, o espaço fica reservado */
 }
  
+/* ── Nome ── */
 .hero-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -139,6 +152,7 @@ nav.scrolled {
   color: #e8e0d0;
 }
  
+/* ── Cargo ── */
 .hero-role {
   font-size: 0.7rem;
   letter-spacing: 0.3em;
@@ -146,6 +160,7 @@ nav.scrolled {
   color: #C9A84C;
 }
  
+/* ── Slogan ── */
 .hero-slogan {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.1rem, 2.5vw, 1.6rem);
@@ -155,6 +170,7 @@ nav.scrolled {
   margin-top: 0.5rem;
 }
  
+/* ── Botão ── */
 .hero-btn {
   display: inline-block;
   margin-top: 1.5rem;
@@ -170,6 +186,15 @@ nav.scrolled {
 .hero-btn:hover {
   background: #C9A84C;
   color: #0a0a0a;
+}
+
+/* ══════════════════════════════
+   UTILITÁRIOS GERAIS
+══════════════════════════════ */
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .section-label {
@@ -188,6 +213,291 @@ nav.scrolled {
   margin-bottom: 3rem;
 }
 
+
+/* ══════════════════════════════
+   SOBRE — HERO DA PÁGINA
+══════════════════════════════ */
+
+.sobre-hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem 5vw 4rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.sobre-hero-sub {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a7f6f;
+  margin-top: -2rem;
+}
+
+
+/* ══════════════════════════════
+   SOBRE — BIOGRAFIA
+══════════════════════════════ */
+
+.sobre-bio {
+  padding: 6rem 5vw;
+  background: #111111;
+}
+
+.sobre-bio-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 6rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sobre-foto-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sobre-foto {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: #1a1a1a;
+}
+
+.sobre-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-oab-card {
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.sobre-oab-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #8a7f6f;
+}
+
+.sobre-oab-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: #C9A84C;
+  letter-spacing: 0.1em;
+}
+
+.sobre-oab-membro {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a7f6f;
+}
+
+.sobre-bio-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sobre-bio-texto p {
+  font-size: 0.9rem;
+  color: #8a7f6f;
+  line-height: 1.95;
+}
+
+
+/* ══════════════════════════════
+   SOBRE — FORMAÇÃO E EXPERIÊNCIA
+══════════════════════════════ */
+
+.sobre-formacao {
+  padding: 6rem 5vw;
+}
+
+.sobre-formacao-grid {
+  display: grid;
+  grid-template-columns: 1fr;  /* 👈 uma coluna só */
+  gap: 3rem;
+  max-width: 700px;  /* 👈 reduz a largura para ficar mais elegante */
+  margin: 0 auto;
+}
+
+.sobre-col-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #e8e0d0;
+  margin-bottom: 2.5rem;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 1px solid rgba(201, 168, 76, 0.25);
+  position: relative;
+}
+
+/* Ponto dourado na linha */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 1.9rem;
+  width: 7px;
+  height: 7px;
+  background: #C9A84C;
+  border-radius: 50%;
+}
+
+.timeline-ano {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #e8e0d0;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-item p {
+  font-size: 0.8rem;
+  color: #8a7f6f;
+  line-height: 1.8;
+}
+
+
+
+
+/* ══════════════════════════════
+   SOBRE — COMPROMISSO
+══════════════════════════════ */
+
+.sobre-compromisso {
+  padding: 7rem 5vw;
+  text-align: center;
+}
+
+.sobre-compromisso-inner {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sobre-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+  font-style: italic;
+  font-weight: 300;
+  color: #e8e0d0;
+  line-height: 1.7;
+  border: none;
+  margin: 0;
+}
+
+.sobre-quote-autor {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-top: 1.5rem;
+}
+
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+
+footer {
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  padding: 2.5rem 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  color: #C9A84C;
+  text-transform: uppercase;
+}
+
+.footer-copy {
+  font-size: 0.65rem;
+  color: #8a7f6f;
+  letter-spacing: 0.1em;
+}
+
+.footer-social a {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #8a7f6f;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #C9A84C;
+}
+
+
+/* ══════════════════════════════
+   RESPONSIVO
+══════════════════════════════ */
+
+@media (max-width: 768px) {
+  .sobre-bio-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .sobre-foto {
+    aspect-ratio: 1/1;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .sobre-formacao-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ══════════════════════════════
+   DIFERENCIAIS
+══════════════════════════════ */
 
 .diferenciais {
   padding: 6rem 5vw;
@@ -233,6 +543,10 @@ nav.scrolled {
   line-height: 1.8;
 }
 
+
+/* ══════════════════════════════
+   MISSÃO VISÃO VALORES
+══════════════════════════════ */
 
 .mvv {
   padding: 6rem 5vw;
@@ -283,6 +597,10 @@ nav.scrolled {
   line-height: 1.9;
 }
 
+
+/* ══════════════════════════════
+   FAQ
+══════════════════════════════ */
 
 .faq {
   padding: 6rem 5vw;
@@ -349,6 +667,10 @@ nav.scrolled {
   line-height: 1.9;
 }
 
+
+/* ══════════════════════════════
+   NOTÍCIAS
+══════════════════════════════ */
 
 .noticias {
   padding: 6rem 5vw;
@@ -417,39 +739,613 @@ nav.scrolled {
   font-size: 0.85rem;
   letter-spacing: 0.1em;
 }
+/* ══════════════════════════════
+   ANIMAÇÃO AO ROLAR
+══════════════════════════════ */
+
+/* Estado inicial: invisível e levemente abaixo */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Estado final: visível, na posição normal */
+.reveal.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
-footer {
-  border-top: 1px solid rgba(201, 168, 76, 0.2);
-  padding: 2.5rem 5vw;
+/* ══════════════════════════════
+   LINK ATIVO NA NAVBAR
+══════════════════════════════ */
+
+.nav-links a.ativo {
+  color: #C9A84C;
+  /* Linha dourada embaixo do link ativo */
+  border-bottom: 1px solid #C9A84C;
+  padding-bottom: 2px;
+}
+
+
+/* ══════════════════════════════
+   BOTÃO VOLTAR AO TOPO
+══════════════════════════════ */
+
+#btn-topo {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #C9A84C;
+  background: #0a0a0a;
+  color: #C9A84C;
+  font-size: 1.1rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;
+  z-index: 200;
+
+  /* Começa invisível */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
 }
 
-.footer-brand {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.2em;
-  color: #C9A84C;
+#btn-topo.visivel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#btn-topo:hover {
+  background: #C9A84C;
+  color: #0a0a0a;
+}
+/* Tema escuro (padrão) */
+:root {
+  --bg: #0a0a0a;
+  --bg2: #111111;
+  --texto: #e8e0d0;
+  --texto-muted: #8a7f6f;
+  --dourado: #C9A84C;
+}
+
+/* Tema claro — sobrescreve as variáveis */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f0e8;
+    --bg2: #ede8df;
+    --texto: #1a1a1a;
+    --texto-muted: #5a5040;
+    --dourado: #b8943f;
+  }
+}
+
+/* Aí no CSS você usa as variáveis em vez de cores fixas */
+body {
+  background: var(--bg);
+  color: var(--texto);
+}
+
+nav {
+  background: var(--bg);
+}
+/* ══════════════════════════════
+   ÁREAS — HERO
+══════════════════════════════ */
+
+.areas-hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem 5vw 4rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.areas-hero-sub {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
+  color: #8a7f6f;
+  margin-top: -2rem;
 }
 
-.footer-copy {
-  font-size: 0.65rem;
-  color: #8a7f6f;
-  letter-spacing: 0.1em;
+
+/* ══════════════════════════════
+   ÁREAS — GRID DE CARDS
+══════════════════════════════ */
+
+.areas-section {
+  padding: 6rem 5vw;
 }
 
-.footer-social a {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.area-card {
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-color 0.3s;
+  background: #111111;
+}
+
+.area-card:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+/* ── Cabeçalho do card ── */
+.area-card-header {
+  padding: 2.5rem 2.5rem 2rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.area-icone {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.area-nome {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #e8e0d0;
+  margin-bottom: 0.8rem;
+}
+
+.area-desc {
+  font-size: 0.82rem;
   color: #8a7f6f;
+  line-height: 1.8;
+}
+
+/* ── Lista de serviços ── */
+.area-servicos {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  flex: 1;
+}
+
+.area-servicos-titulo {
+  font-size: 0.62rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-bottom: 1rem;
+}
+
+.area-servicos ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.area-servicos ul li {
+  font-size: 0.82rem;
+  color: #8a7f6f;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+/* Bolinha dourada antes de cada item */
+.area-servicos ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  background: #C9A84C;
+  border-radius: 50%;
+}
+
+/* ── Pergunta frequente ── */
+.area-faq {
+  padding: 2rem 2.5rem;
+  background: rgba(201, 168, 76, 0.04);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.area-faq-pergunta {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e8e0d0;
+  text-align: left;
+  gap: 1rem;
   transition: color 0.3s;
 }
 
-.footer-social a:hover {
+.area-faq-pergunta:hover {
   color: #C9A84C;
+}
+
+.area-faq-resposta {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+}
+
+.area-faq.aberto .area-faq-resposta {
+  max-height: 200px;
+  padding-top: 0.8rem;
+}
+
+.area-faq.aberto .faq-icone {
+  transform: rotate(45deg);
+}
+
+/* ── Botão do card ── */
+.area-btn {
+  display: block;
+  text-align: center;
+  padding: 1.1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  transition: background 0.3s, color 0.3s;
+}
+
+.area-btn:hover {
+  background: #C9A84C;
+  color: #0a0a0a;
+}
+
+
+/* ══════════════════════════════
+   ÁREAS — CTA FINAL
+══════════════════════════════ */
+
+.areas-cta {
+  padding: 6rem 5vw;
+  text-align: center;
+  background: #111111;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.areas-cta-texto {
+  font-size: 0.9rem;
+  color: #8a7f6f;
+  max-width: 500px;
+  margin: -1.5rem auto 2.5rem;
+  line-height: 1.8;
+}
+
+
+/* ══════════════════════════════
+   RESPONSIVO
+══════════════════════════════ */
+
+@media (max-width: 768px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ══════════════════════════════
+   CONTATO — HERO
+══════════════════════════════ */
+ 
+.contato-hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10rem 5vw 4rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+ 
+.contato-hero-sub {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #8a7f6f;
+  margin-top: -2rem;
+}
+ 
+ 
+/* ══════════════════════════════
+   CONTATO — GRID PRINCIPAL
+══════════════════════════════ */
+ 
+.contato-section {
+  padding: 6rem 5vw;
+}
+ 
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+ 
+/* ══════════════════════════════
+   CONTATO — INFORMAÇÕES
+══════════════════════════════ */
+ 
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+ 
+.contato-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+ 
+.contato-bloco:last-child {
+  border-bottom: none;
+}
+ 
+.contato-bloco-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C9A84C;
+}
+ 
+.contato-valor {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  color: #e8e0d0;
+  line-height: 1.6;
+  transition: color 0.3s;
+}
+ 
+.contato-valor:hover {
+  color: #C9A84C;
+}
+ 
+.contato-bloco-obs {
+  font-size: 0.72rem;
+  color: #8a7f6f;
+}
+ 
+/* Botão WhatsApp */
+.contato-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #C9A84C;
+  color: #C9A84C;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: background 0.3s, color 0.3s;
+  width: fit-content;
+}
+ 
+.contato-whatsapp-btn:hover {
+  background: #C9A84C;
+  color: #0a0a0a;
+}
+ 
+/* Horário */
+.contato-horario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ 
+.contato-horario-linha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #8a7f6f;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+}
+ 
+.contato-horario-hora {
+  color: #e8e0d0;
+  font-weight: 500;
+}
+ 
+.contato-horario-fechado {
+  color: #5a5040;
+}
+ 
+/* Social */
+.contato-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #8a7f6f;
+  transition: color 0.3s;
+}
+ 
+.contato-social-link:hover {
+  color: #C9A84C;
+}
+ 
+ 
+/* ══════════════════════════════
+   CONTATO — FORMULÁRIO
+══════════════════════════════ */
+ 
+.contato-form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ 
+.contato-form-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #e8e0d0;
+}
+ 
+.contato-form-sub {
+  font-size: 0.78rem;
+  color: #8a7f6f;
+  margin-bottom: 1.5rem;
+}
+ 
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+ 
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+ 
+.form-grupo label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a7f6f;
+}
+ 
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+  background: #111111;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  color: #e8e0d0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.85rem 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+  resize: none;
+}
+ 
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+  color: #5a5040;
+}
+ 
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+  border-color: #C9A84C;
+}
+ 
+/* Estilo do select */
+.form-grupo select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+ 
+.form-grupo select option {
+  background: #111111;
+  color: #e8e0d0;
+}
+ 
+.form-btn {
+  background: transparent;
+  border: 1px solid #C9A84C;
+  color: #C9A84C;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+ 
+.form-btn:hover {
+  background: #C9A84C;
+  color: #0a0a0a;
+}
+ 
+ 
+/* ══════════════════════════════
+   CONTATO — MAPA
+══════════════════════════════ */
+ 
+.contato-mapa {
+  padding: 6rem 5vw;
+  background: #111111;
+  text-align: center;
+}
+ 
+.contato-mapa .section-title {
+  margin-bottom: 2.5rem;
+}
+ 
+.mapa-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  overflow: hidden;
+  filter: grayscale(0.6) brightness(0.8);
+  transition: filter 0.4s;
+}
+ 
+.mapa-wrap:hover {
+  filter: grayscale(0) brightness(1);
+}
+ 
+.mapa-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  transition: opacity 0.3s;
+}
+ 
+.mapa-link:hover {
+  opacity: 0.7;
+}
+ 
+ 
+/* ══════════════════════════════
+   RESPONSIVO
+══════════════════════════════ */
+ 
+@media (max-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
